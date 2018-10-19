@@ -1,1 +1,29 @@
-Hello World!
+<!DOCTYPE HTML>
+<html >
+	<head>
+		<script
+		  src="https://code.jquery.com/jquery-3.3.1.min.js"
+		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		  crossorigin="anonymous"></script>
+
+		<script>
+			$(document).ready(function () {
+			setInterval(function() {
+				$.get("/api/timestamp", function(data) {
+					$("#timestamp").html(data)
+				})
+			}, 500)
+				
+			})
+		</script>
+	</head>
+	<body>
+		<h1 id="my-text">My times</h1>
+		<div id="timestamp" style="float: left">
+		12312312
+		</div>
+		<div style="background-color: aquamarine; float: left; padding-left: 39px">
+		 09/10/2018
+		</div>
+	</body>
+</html>
